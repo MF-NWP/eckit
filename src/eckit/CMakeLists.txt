@@ -39,8 +39,8 @@ check_c_source_compiles( "#define _GNU_SOURCE\n#include <stdio.h>\nint main(){ v
 check_c_source_compiles( "#include <unistd.h>\n#include <execinfo.h>\n int main(){ void ** buffer; int i = backtrace(buffer, 256); }\n"
     ECKIT_HAVE_EXECINFO_BACKTRACE )
 
-check_cxx_source_compiles( "#include <cxxabi.h>\n int main() { char * type; int status; char * r = abi::__cxa_demangle(type, 0, 0, &status); }"
-    ECKIT_HAVE_CXXABI_H )
+#check_cxx_source_compiles( "#include <cxxabi.h>\n int main() { char * type; int status; char * r = abi::__cxa_demangle(type, 0, 0, &status); }"
+#    ECKIT_HAVE_CXXABI_H )
 
 check_c_source_compiles( "#include <time.h>\nint main(){ time_t now; time(&now); struct tm t; gmtime_r(&now,&t); }\n"
     ECKIT_HAVE_GMTIME_R )
