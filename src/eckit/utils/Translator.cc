@@ -9,6 +9,7 @@
  */
 
 #include <cstdlib>
+#include <cwctype>
 
 #include "eckit/exception/Exceptions.h"
 #include "eckit/utils/StringTools.h"

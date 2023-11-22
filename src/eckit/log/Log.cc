@@ -28,6 +28,9 @@
 #include "eckit/thread/ThreadSingleton.h"
 #include "eckit/utils/Translator.h"
 
+#ifdef __NEC__
+  #define strerror_r(a, b, c) 0
+#endif
 
 namespace eckit {
 

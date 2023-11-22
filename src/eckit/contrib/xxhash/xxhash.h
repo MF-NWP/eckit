@@ -1591,6 +1591,10 @@ static int XXH_isLittleEndian(void)
  *   @p x and @p r may be evaluated multiple times.
  * @return The rotated result.
  */
+#if defined(__NEC__)
+#  define XXH_rotl32(x,r) (((x) << (r)) | ((x) >> (32 - (r))))
+#  define XXH_rotl64(x,r) (((x) << (r)) | ((x) >> (64 - (r))))
+#else
 #if !defined(NO_CLANG_BUILTIN) && XXH_HAS_BUILTIN(__builtin_rotateleft32) \
                                && XXH_HAS_BUILTIN(__builtin_rotateleft64)
 #  define XXH_rotl32 __builtin_rotateleft32
@@ -1602,6 +1606,7 @@ static int XXH_isLittleEndian(void)
 #else
 #  define XXH_rotl32(x,r) (((x) << (r)) | ((x) >> (32 - (r))))
 #  define XXH_rotl64(x,r) (((x) << (r)) | ((x) >> (64 - (r))))
+#endif
 #endif
 
 /*!

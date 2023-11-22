@@ -17,6 +17,7 @@
 
 #include <cstddef>
 #include <string>
+#include <algorithm>
 
 #include "eckit/memory/NonCopyable.h"
 

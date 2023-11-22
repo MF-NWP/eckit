@@ -10,6 +10,7 @@
 
 
 #include <cstring>
+#include <algorithm>
 
 #include "eckit/io/Buffer.h"
 #include "eckit/serialisation/MemoryStream.h"

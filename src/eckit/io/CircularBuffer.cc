@@ -9,6 +9,7 @@
  */
 
 #include <cstring>
+#include <algorithm>
 
 #include "eckit/exception/Exceptions.h"
 #include "eckit/io/CircularBuffer.h"

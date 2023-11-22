@@ -16,6 +16,8 @@
 #ifndef eckit_Date_h
 #define eckit_Date_h
 
+#include <algorithm>
+
 #include "eckit/persist/Bless.h"
 
 namespace eckit {

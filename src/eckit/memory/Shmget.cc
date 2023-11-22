@@ -9,6 +9,7 @@
  */
 
 #include <map>
+#include <algorithm>
 
 #include "eckit/eckit.h"
 #include "eckit/exception/Exceptions.h"

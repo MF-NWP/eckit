@@ -38,11 +38,13 @@ std::ostream& operator<<(std::ostream& s, const ETA& sec) {
     return s;
 }
 
+#ifndef __NEC__
 ETA::operator std::string() const {
     std::ostringstream s;
     s << *this;
     return s.str();
 }
+#endif
 
 //----------------------------------------------------------------------------------------------------------------------
 

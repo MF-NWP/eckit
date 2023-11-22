@@ -10,6 +10,7 @@
 
 #include <iomanip>
 #include <string>
+#include <algorithm>
 
 #include "eckit/log/JSON.h"
 #include "eckit/types/DateTime.h"

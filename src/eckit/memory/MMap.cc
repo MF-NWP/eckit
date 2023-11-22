@@ -10,6 +10,7 @@
 
 #include <sys/mman.h>
 #include <unistd.h>
+#include <algorithm>
 
 #include "eckit/eckit.h"
 #include "eckit/exception/Exceptions.h"

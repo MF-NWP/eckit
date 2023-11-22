@@ -10,6 +10,7 @@
 
 #include <unistd.h>
 #include <memory>
+#include <algorithm>
 
 #include "eckit/net/MultiSocket.h"
 #include "eckit/net/TCPClient.h"
